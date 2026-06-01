@@ -16,4 +16,4 @@ if __name__ == "__main__":
     ]
     result = group_by_company(consultants)
     for company, members in result.items():
-        print(f"{company}: {members}")
+        print(f"{company}: {members}")# Q9: Group consultants by company
