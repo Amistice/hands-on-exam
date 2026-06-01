@@ -1,0 +1,15 @@
+def is_palindrome(s: str) -> bool:
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    left, right = 0, len(cleaned) - 1
+    while left < right:
+        if cleaned[left] != cleaned[right]:
+            return False
+        left  += 1
+        right -= 1
+    return True
+
+
+if __name__ == "__main__":
+    tests = ["madam", "nurses run", "hello", "A man a plan a canal Panama"]
+    for t in tests:
+        print(f'"{t}" -> {is_palindrome(t)}')

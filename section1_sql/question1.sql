@@ -1,0 +1,9 @@
+SELECT
+    c.CUSTOMER_NAME,
+    COUNT(DISTINCT f.SALE_DATE)  AS distinct_purchase_days,
+    SUM(f.SALE_AMOUNT)           AS total_revenue
+FROM MEAT_SALE_F f
+JOIN CUSTOMER_D c ON f.CUSTOMER_ID = c.CUSTOMER_ID
+GROUP BY c.CUSTOMER_ID, c.CUSTOMER_NAME
+HAVING COUNT(*) > 3
+ORDER BY total_revenue DESC;
