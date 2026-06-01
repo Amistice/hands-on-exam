@@ -12,4 +12,4 @@ def is_palindrome(s: str) -> bool:
 if __name__ == "__main__":
     tests = ["madam", "nurses run", "hello", "A man a plan a canal Panama"]
     for t in tests:
-        print(f'"{t}" -> {is_palindrome(t)}')
+        print(f'"{t}" -> {is_palindrome(t)}')# Q10: Palindrome checker with two-pointer
